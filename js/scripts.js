@@ -20,5 +20,5 @@ do {
 	if (treeHeight < 0) alert("Tylko liczby całkowite, dodatnie!");
 	else if (treeHeight == 0) alert("Nie lubisz świąt, co ponuraku?");	
 }
-while(treeHeight < 0)
+while(treeHeight < 0);
 
