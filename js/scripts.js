@@ -1,27 +1,24 @@
 var treeHeight = 0;
 
-function drewTree(n) {
+function drawTree(n) {
 	star = "";
-	console.log('');
-	while (n > 0) {
-		n--;
-		star+='*';
+	for (i = 0; i < n; i++) {
+		star += '*';
 		console.log(star);	
 	}
 }
 
-function getNumber(n) {
+function getNumber() {
 	treeHeight = prompt("Podaj wielkość choinki:");
 	return treeHeight;
 }
 
-getNumber();
 
-while(treeHeight < 0) {
-	alert("Tylko liczby całkowite, dodatnie!");
-	getNumber();	
+do {
+	getNumber();
+	drawTree(treeHeight);
+	if (treeHeight < 0) alert("Tylko liczby całkowite, dodatnie!");
+	else if (treeHeight == 0) alert("Nie lubisz świąt, co ponuraku?");	
 }
+while(treeHeight < 0)
 
-if (treeHeight == 0) alert("Nie lubisz świąt, co ponuraku?");	
-
-drewTree(treeHeight);
